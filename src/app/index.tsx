@@ -18,9 +18,9 @@ TaskManager.defineTask(LOCATION_TRACKING_TASK, async ({ data, error }) => {
     if (locations && locations.length > 0) {
       const location = locations[0];
       
-      // Local Sunucumuza POST isteği gönderiyoruz
+      // Cloudflare Pages Serverless API Uç Noktasına Gönderiyoruz
       try {
-        await fetch('http://192.168.1.102:3000/api/location', {
+        await fetch('https://life180.pages.dev/api/location', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ TaskManager.defineTask(LOCATION_TRACKING_TASK, async ({ data, error }) => {
             longitude: location.coords.longitude,
             speed: location.coords.speed || 0,
             timestamp: location.timestamp,
-            battery: 100 // Test amaçlı
+            battery: 100
           })
         });
       } catch (err) {
