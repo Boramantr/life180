@@ -1,0 +1,18 @@
+{
+  "short_name": "LIFE180",
+  "name": "LIFE180 Ebeveyn Kontrolü",
+  "description": "Çocuk ve ebeveyn koruma sistemi.",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/512/security-shield.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0F172A",
+  "theme_color": "#6366F1",
+  "display": "standalone",
+  "orientation": "portrait"
+}
