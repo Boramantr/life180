@@ -8,7 +8,16 @@
     "scheme": "life180",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location"
+        ],
+        "NSLocationWhenInUseUsageDescription": "Bu uygulama çocuğunuzun güvenliği için aktif olarak konum takibi yapabilmelidir.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Bu uygulama çocuğunuzun güvenliği için arka planda da sürekli konum takibi yapabilmelidir.",
+        "NSLocationAlwaysUsageDescription": "Bu uygulama çocuğunuzun güvenliği için arka planda da sürekli konum takibi yapabilmelidir."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,7 +26,14 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION"
+      ]
     },
     "web": {
       "output": "static",
@@ -39,6 +55,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "d1e501a0-9e77-4653-8970-89678ff8ebb0"
+      }
+    },
+    "owner": "boraocaker"
   }
 }
